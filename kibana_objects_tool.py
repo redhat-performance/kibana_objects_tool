@@ -254,7 +254,7 @@ def main():
         "fix_title",
         help="fix title of the stored saved objects, please edit code for actual changing the title")
     parser_a.add_argument(
-        "--directory", default=".",
+        "--dirname", default=".",
         help="directory with stored objects JSONs")
 
     parser_b = subparsers.add_parser(
