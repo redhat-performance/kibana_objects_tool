@@ -15,8 +15,13 @@ class Entity():
         self._data = None
         self._filename = None
 
+        self.logger = logging.getLogger(str(self))
+
     def __repr__(self):
         return f"<Entity({self._filename})>"
+
+    def __str__(self):
+        return str(self.__repr__())
 
     @property
     def filename(self):
@@ -90,8 +95,11 @@ class Entity():
         """
         Return Entity class instance from given filename.
         """
+        logger = logging.getLogger('kibana_objects_tool.Entity.load_from_scm')
+
         e = Entity()
 
+        logger.debug(f"Loading file {filename}")
         with open(filename, 'r') as fp:
             data = json.load(fp)
 
@@ -110,8 +118,11 @@ class Entity():
         """
         Return Entity class instance from every suitable file in given directory.
         """
+        logger = logging.getLogger('kibana_objects_tool.Entity.load_all_from_scm')
+
         data = []
 
+        logger.debug(f"Listing directory {dirname}")
         for f in os.listdir(dirname):
             if f.endswith(".json"):
                 data.append(Entity.load_from_scm(f))
