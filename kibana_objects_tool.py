@@ -46,6 +46,10 @@ class Entity():
             self.attributes = a
 
     @property
+    def size(self):
+        return len(json.dumps(self._data))
+
+    @property
     def attributes(self):
         a = self._data["attributes"]
 
@@ -240,6 +244,11 @@ def split_export(args):
                 raise Exception(f"Unknown document: {entity_raw}")
 
 
+def list_objects(args):
+    for e in Entity.load_all_from_scm("."):
+        print(f"e.filename: {e.type} '{e.title}' {e.size} B")
+
+
 def main():
     parser = argparse.ArgumentParser(prog="Work with Kibana saved objects")
     parser.add_argument(
@@ -275,6 +284,10 @@ def main():
         "--filename", default="export.ndjson",
         help="filename with export from Kibana")
 
+    parser_e = subparsers.add_parser(
+        "list_objects",
+        help="list JSONs and titles in them")
+
     args = parser.parse_args()
 
     logger = logging.getLogger("kibana_objects_tool")
@@ -298,6 +311,8 @@ def main():
         duplicate_selected(args)
     elif args.subcommand == "split_export":
         split_export(args)
+    elif args.subcommand == "list_objects":
+        list_objects(args)
     else:
         raise Exception(f"Unknown subcommand {args.subcommand}")
 

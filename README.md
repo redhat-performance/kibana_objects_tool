@@ -6,6 +6,15 @@ This tool is supposed to help manage Kibana saved objects in git.
 Make sure you are in a directopry where your saved object JSONs reside
 when running this script.
 
+
+Show what we have
+-----------------
+
+Show what objects we have in current directry:
+
+    ./kibana_objects_tool.py list_objects
+
+
 Backup from Kibana
 ------------------
 
@@ -25,6 +34,7 @@ And then to use the tool to prepare for a commit:
 Now you have these saved objects in individual files (one saved object for
 one file), keys inside of the JSONs are ordered and JSONs itself are nicely
 indented.
+
 
 Restore to Kibana
 -----------------
