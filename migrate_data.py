@@ -13,21 +13,14 @@ class MigrateData:
     def get_olddocs(self):
         self.data_dict = {}
         es = elasticsearch.Elasticsearch(self.oldes)
-        es_response = scan(es, index='insights_perf_index*', query={"query":{"match_all":{}}})
-        count = 0
+        es_response = scan(es, index='insights_perf_index*', query={"query":{"match_all":{}}}, raise_on_error=False)
         for item in es_response:
-            count += 1
-            if count < 1000:
-                try:
-                    self.data_dict[item['_index']].append(item['_source'])
-                except KeyError:
-                    self.data_dict[item['_index']] = []
-                    self.data_dict[item['_index']].append(item['_source'])
-                except:
-                    pass
-            else:
-                break
-        
+            try:
+                self.data_dict[item['_index']].append(item['_source'])
+            except KeyError:
+                self.data_dict[item['_index']] = []
+                self.data_dict[item['_index']].append(item['_source'])
+
         return
 
     def upload_olddocs(self):
