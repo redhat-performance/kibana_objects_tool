@@ -1,0 +1,76 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "hits": 0,
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"key\":\"golden.keyword\",\"negate\":false,\"params\":{\"query\":\"true\"},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"golden.keyword\":{\"query\":\"true\",\"type\":\"phrase\"}}}}]}"
+            },
+            "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+            "panelsJSON": "[{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":10,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{},\"panelRefName\":\"panel_0\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":10,\"w\":48,\"h\":14,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":24,\"y\":24,\"w\":24,\"h\":15,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":39,\"w\":24,\"h\":15,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":24,\"w\":24,\"h\":15,\"i\":\"6\"},\"panelIndex\":\"6\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":24,\"y\":39,\"w\":24,\"h\":15,\"i\":\"7\"},\"panelIndex\":\"7\",\"embeddableConfig\":{},\"panelRefName\":\"panel_5\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":54,\"w\":24,\"h\":15,\"i\":\"8\"},\"panelIndex\":\"8\",\"embeddableConfig\":{},\"panelRefName\":\"panel_6\"},{\"version\":\"7.10.0\",\"gridData\":{\"w\":24,\"h\":15,\"x\":24,\"y\":54,\"i\":\"9\"},\"panelIndex\":\"9\",\"embeddableConfig\":{},\"panelRefName\":\"panel_7\"}]",
+            "refreshInterval": {
+                "pause": true,
+                "value": 0
+            },
+            "timeFrom": "now-30d",
+            "timeRestore": true,
+            "timeTo": "now",
+            "title": "RHCloud CPT: RBAC",
+            "version": 1
+        },
+        "id": "698b74f0-49ca-11ea-bfca-3fb30f912ea8",
+        "migrationVersion": {
+            "dashboard": "7.9.3"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "32655510-49c8-11ea-bfca-3fb30f912ea8",
+                "name": "panel_0",
+                "type": "visualization"
+            },
+            {
+                "id": "8f187040-4cb0-11ea-bfca-3fb30f912ea8",
+                "name": "panel_1",
+                "type": "visualization"
+            },
+            {
+                "id": "fee27330-4cb0-11ea-bfca-3fb30f912ea8",
+                "name": "panel_2",
+                "type": "visualization"
+            },
+            {
+                "id": "370ca780-4cb1-11ea-bfca-3fb30f912ea8",
+                "name": "panel_3",
+                "type": "visualization"
+            },
+            {
+                "id": "14d00000-99a9-11ea-92bb-1f79e855a38a",
+                "name": "panel_4",
+                "type": "visualization"
+            },
+            {
+                "id": "b09d19f0-f3fe-11ea-83da-d76f25b0f35c",
+                "name": "panel_5",
+                "type": "visualization"
+            },
+            {
+                "id": "6bdadbf0-4ff1-11eb-83da-d76f25b0f35c",
+                "name": "panel_6",
+                "type": "visualization"
+            },
+            {
+                "id": "94f74dc0-4ff1-11eb-83da-d76f25b0f35c",
+                "name": "panel_7",
+                "type": "visualization"
+            }
+        ],
+        "type": "dashboard",
+        "updated_at": "2021-06-22T06:45:49.410Z",
+        "version": "WzU2MzY5LDE0XQ=="
+    }
+]

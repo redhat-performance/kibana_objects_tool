@@ -1,0 +1,33 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"name.keyword\",\n        \"value\": \"Receptor stresstest test\",\n        \"params\": {\n          \"query\": \"Receptor stresstest test\",\n          \"type\": \"phrase\"\n        },\n        \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"\n      },\n      \"query\": {\n        \"match\": {\n          \"name.keyword\": {\n            \"query\": \"Receptor stresstest test\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ],\n  \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"\n}"
+            },
+            "title": "RHCloud CPT: Receptor runs info",
+            "uiStateJSON": "{\n  \"vis\": {\n    \"params\": {\n      \"sort\": {\n        \"columnIndex\": 0,\n        \"direction\": \"desc\"\n      }\n    }\n  }\n}",
+            "version": 1,
+            "visState": "{\n  \"title\": \"Receptor runs info\",\n  \"type\": \"table\",\n  \"params\": {\n    \"perPage\": 10,\n    \"showMetricsAtAllLevels\": false,\n    \"showPartialRows\": false,\n    \"showTotal\": false,\n    \"sort\": {\n      \"columnIndex\": 0,\n      \"direction\": \"desc\"\n    },\n    \"totalFunc\": \"sum\"\n  },\n  \"aggs\": [\n    {\n      \"id\": \"6\",\n      \"enabled\": true,\n      \"type\": \"top_hits\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.cluster.pods.receptor-gateway.commit.id.keyword\",\n        \"aggregate\": \"concat\",\n        \"size\": 1,\n        \"sortField\": \"started\",\n        \"sortOrder\": \"asc\",\n        \"customLabel\": \"Git commit\"\n      }\n    },\n    {\n      \"id\": \"11\",\n      \"enabled\": true,\n      \"type\": \"top_hits\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.cluster.pods.receptor-gateway.count.keyword\",\n        \"aggregate\": \"concat\",\n        \"size\": 3,\n        \"sortField\": \"started\",\n        \"sortOrder\": \"desc\",\n        \"customLabel\": \"Receptors count [#]\"\n      }\n    },\n    {\n      \"id\": \"10\",\n      \"enabled\": true,\n      \"type\": \"avg\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.test.fake_satellites_count\",\n        \"customLabel\": \"Nodes count [#]\"\n      }\n    },\n    {\n      \"id\": \"4\",\n      \"enabled\": true,\n      \"type\": \"max\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.test.stresstest_length\",\n        \"customLabel\": \"Stresstest length [#]\"\n      }\n    },\n    {\n      \"id\": \"5\",\n      \"enabled\": true,\n      \"type\": \"max\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.test.stresstest_rate\",\n        \"customLabel\": \"Stresstest rate [#]\"\n      }\n    },\n    {\n      \"id\": \"8\",\n      \"enabled\": true,\n      \"type\": \"max\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.test.stresstest_size\",\n        \"customLabel\": \"Stresstest size [B]\"\n      }\n    },\n    {\n      \"id\": \"9\",\n      \"enabled\": true,\n      \"type\": \"max\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"results.kafka.consumed_messages\",\n        \"customLabel\": \"Consumed messages [#]\"\n      }\n    },\n    {\n      \"id\": \"13\",\n      \"enabled\": true,\n      \"type\": \"top_hits\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"result.keyword\",\n        \"aggregate\": \"concat\",\n        \"size\": 1,\n        \"sortField\": \"started\",\n        \"sortOrder\": \"desc\",\n        \"customLabel\": \"Result\"\n      }\n    },\n    {\n      \"id\": \"12\",\n      \"enabled\": true,\n      \"type\": \"top_hits\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"golden.keyword\",\n        \"aggregate\": \"concat\",\n        \"size\": 1,\n        \"sortField\": \"started\",\n        \"sortOrder\": \"desc\",\n        \"customLabel\": \"Golden?\"\n      }\n    },\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"top_hits\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"parameters.cluster.context.keyword\",\n        \"aggregate\": \"concat\",\n        \"size\": 1,\n        \"sortField\": \"started\",\n        \"sortOrder\": \"desc\",\n        \"customLabel\": \"Cluster\"\n      }\n    },\n    {\n      \"id\": \"3\",\n      \"enabled\": true,\n      \"type\": \"top_hits\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"results.jenkins.build_url.keyword\",\n        \"aggregate\": \"concat\",\n        \"size\": 1,\n        \"sortField\": \"started\",\n        \"sortOrder\": \"desc\",\n        \"customLabel\": \"Jenkins job\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"bucket\",\n      \"params\": {\n        \"field\": \"parameters.run.keyword\",\n        \"size\": 100,\n        \"order\": \"desc\",\n        \"orderBy\": \"_key\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\",\n        \"customLabel\": \"Test run ID\"\n      }\n    }\n  ]\n}"
+        },
+        "id": "5c3a2d20-a65c-11ea-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            }
+        ],
+        "type": "visualization",
+        "updated_at": "2021-06-25T12:30:51.548Z",
+        "version": "WzU4OTEzLDE0XQ=="
+    }
+]

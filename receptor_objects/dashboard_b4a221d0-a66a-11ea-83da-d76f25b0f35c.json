@@ -1,0 +1,66 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "hits": 0,
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"key\":\"golden.keyword\",\"negate\":false,\"params\":{\"query\":\"true\"},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"golden.keyword\":{\"query\":\"true\",\"type\":\"phrase\"}}}}]}"
+            },
+            "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+            "panelsJSON": "[{\"version\":\"7.10.0\",\"gridData\":{\"h\":10,\"i\":\"1\",\"w\":48,\"x\":0,\"y\":0},\"panelIndex\":\"1\",\"embeddableConfig\":{},\"panelRefName\":\"panel_0\"},{\"version\":\"7.10.0\",\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":48,\"x\":0,\"y\":10},\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"version\":\"7.10.0\",\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":25},\"panelIndex\":\"4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"version\":\"7.10.0\",\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":24,\"x\":24,\"y\":40},\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"version\":\"7.10.0\",\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":24,\"x\":0,\"y\":40},\"panelIndex\":\"6\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"},{\"version\":\"7.10.0\",\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":24,\"x\":0,\"y\":25},\"panelIndex\":\"7\",\"embeddableConfig\":{},\"panelRefName\":\"panel_5\"}]",
+            "refreshInterval": {
+                "pause": true,
+                "value": 0
+            },
+            "timeFrom": "now-30d",
+            "timeRestore": true,
+            "timeTo": "now",
+            "title": "RHCloud CPT: Receptor",
+            "version": 1
+        },
+        "id": "b4a221d0-a66a-11ea-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "dashboard": "7.9.3"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "4b68c1a0-a65c-11ea-83da-d76f25b0f35c",
+                "name": "panel_0",
+                "type": "visualization"
+            },
+            {
+                "id": "5c3a2d20-a65c-11ea-83da-d76f25b0f35c",
+                "name": "panel_1",
+                "type": "visualization"
+            },
+            {
+                "id": "7dccf630-a66a-11ea-83da-d76f25b0f35c",
+                "name": "panel_2",
+                "type": "visualization"
+            },
+            {
+                "id": "e474acd0-a669-11ea-83da-d76f25b0f35c",
+                "name": "panel_3",
+                "type": "visualization"
+            },
+            {
+                "id": "9ef606e0-abdc-11ea-83da-d76f25b0f35c",
+                "name": "panel_4",
+                "type": "visualization"
+            },
+            {
+                "id": "5c667520-240f-11eb-83da-d76f25b0f35c",
+                "name": "panel_5",
+                "type": "visualization"
+            }
+        ],
+        "type": "dashboard",
+        "updated_at": "2021-06-22T06:46:06.469Z",
+        "version": "WzU2Mzc2LDE0XQ=="
+    }
+]

@@ -1,0 +1,33 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"name.keyword\",\"value\":\"Yupana perf test\",\"params\":{\"query\":\"Yupana perf test\",\"type\":\"phrase\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name.keyword\":{\"query\":\"Yupana perf test\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+            },
+            "title": "RHCloud CPT: Yupana runs info",
+            "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+            "version": 1,
+            "visState": "{\"title\":\"RHCloud CPT: Yupana runs info\",\"type\":\"table\",\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"params\":{\"field\":\"id.keyword\",\"orderBy\":\"_key\",\"order\":\"desc\",\"size\":100,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"},\"schema\":\"bucket\"},{\"id\":\"3\",\"enabled\":true,\"type\":\"top_hits\",\"params\":{\"field\":\"parameters.cluster.pods.yupana.commit.id.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Commit ID\"},\"schema\":\"metric\"},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"parameters.payload_generator.tarballs_count\",\"customLabel\":\"Tarballs [#]\"},\"schema\":\"metric\"},{\"id\":\"5\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"parameters.payload_generator.slices_count\",\"customLabel\":\"Slices per tarball [#]\"},\"schema\":\"metric\"},{\"id\":\"6\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"parameters.payload_generator.hosts_count\",\"customLabel\":\"Hosts per slice [#]\"},\"schema\":\"metric\"},{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"parameters.payload_generator.hosts_packages\",\"customLabel\":\"Packages per host [#]\"},\"schema\":\"metric\"},{\"id\":\"11\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"results.kafka.host-ingress.count\",\"customLabel\":\"Hosts on host-ingress [#]\"},\"schema\":\"metric\"},{\"id\":\"10\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"results.yupana_db.tarballs_duration\",\"customLabel\":\"Tarballs duration [s]\"},\"schema\":\"metric\"},{\"id\":\"14\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"results.yupana_db.slices_duration\",\"customLabel\":\"Slices duration [s]\"},\"schema\":\"metric\"},{\"id\":\"16\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"results.ingress.rps_stats.mean\",\"customLabel\":\"Arrival RPS [#]\"},\"schema\":\"metric\"},{\"id\":\"15\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"results.simple_rps\",\"customLabel\":\"Simple RPS [#]\"},\"schema\":\"metric\"},{\"id\":\"12\",\"enabled\":true,\"type\":\"top_hits\",\"params\":{\"field\":\"result.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Result\"},\"schema\":\"metric\"},{\"id\":\"13\",\"enabled\":true,\"type\":\"top_hits\",\"params\":{\"field\":\"golden.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Golden\"},\"schema\":\"metric\"},{\"id\":\"9\",\"enabled\":true,\"type\":\"top_hits\",\"params\":{\"field\":\"results.jenkins.build_url.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Jenkins build link\"},\"schema\":\"metric\"}],\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"percentageCol\":\"\"}}"
+        },
+        "id": "51f51c80-728f-11eb-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            }
+        ],
+        "type": "visualization",
+        "updated_at": "2021-06-25T11:43:16.144Z",
+        "version": "WzU4ODA2LDE0XQ=="
+    }
+]

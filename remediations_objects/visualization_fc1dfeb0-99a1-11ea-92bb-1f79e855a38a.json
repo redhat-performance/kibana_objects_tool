@@ -1,0 +1,22 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+            },
+            "title": "RHCloud CPT: Remediations description",
+            "uiStateJSON": "{}",
+            "version": 1,
+            "visState": "{\"title\":\"RHCloud CPT: Remediations description\",\"type\":\"markdown\",\"aggs\":[],\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"# Remediations perf test results\\n\\nTest measures how quickly remediations-consumer can save mocked FiFi playbook updates (stdout updates sent by individual systems executing the playbook) to remediations DB. For a list of parameters test was running with, take a look into the table. E.g. if we are mocking 10 messages (100B each) per host, 100 hosts per satellite, 3 satellites per remediations run and 10 remediations runs, it means remediations-consumer needs to process 3MB of content in 30k messages.\\n\\nGraphs below shows average duration of all host messages processing (although messages are produced in natural order to the input topic) and RPS based on last message landing in the DB timestamp (update time per host) and \\\"Total RPS\\\" counted in more straight-forward way like <number of hosts> / <total duration>.\"}}"
+        },
+        "id": "fc1dfeb0-99a1-11ea-92bb-1f79e855a38a",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [],
+        "type": "visualization",
+        "updated_at": "2021-06-25T12:27:21.118Z",
+        "version": "WzU4ODkxLDE0XQ=="
+    }
+]

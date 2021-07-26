@@ -1,0 +1,22 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+            },
+            "title": "RHCloud CPT: Yupana test description",
+            "uiStateJSON": "{}",
+            "version": 1,
+            "visState": "{\"title\":\"RHCloud CPT: Yupana test description\",\"type\":\"markdown\",\"aggs\":[],\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"# Yupana CPT test\\n\\nHow the test works:\\n\\n1. Generate number of tarballs (with number of slices per tarball and number of hosts per slice). Note down `subscription-manager-id` for each host\\n1. Upload the tarballs to the S3 storage\\n1. Make sure Yupana have nothing to work on (it's `api_report` and `api_reportslice` tables are empty)\\n1. Produce messages to `platform.upload.qpc` with download links for these tarballs and note down when each tarball was produced\\n1. Track time when first row appears in Yupanas `api_report` table and then when last row disappears and call this \\\"tarballs duration\\\" - how long did it took to Yupana to process all the tarballs\\n1. Track time when first row appears in Yupanas `api_reportslice` table and then when last row disappears and call this \\\"slices duration\\\" - how long did it took to Yupana to process all the slices\\n1. Track how individual systems are landing on `platform.inventory.host-ingress` and note down the message timestamp\\n1. Using per host data, calculate how many hosts made it through and RPS of how hosts were appearing on `host-ingress`\"}}"
+        },
+        "id": "2f0c30f0-728f-11eb-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [],
+        "type": "visualization",
+        "updated_at": "2021-06-25T11:44:02.028Z",
+        "version": "WzU4ODE4LDE0XQ=="
+    }
+]

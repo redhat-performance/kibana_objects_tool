@@ -1,0 +1,22 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+            },
+            "title": "Insights RBAC description",
+            "uiStateJSON": "{}",
+            "version": 1,
+            "visState": "{\"title\":\"Insights RBAC description\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"# RBAC perf test results\\n\\nFirst we show table with metadata about test runs. Then there are graphs showing total RPS value, median response times, RBAC pod mean CPU and memory use.\\n\\nTest works like this:\\n\\n* Populate script creates 10 tenants, each with 10 users, 10 roles and 10 principals\\n* IDs of these new entities are saved and we will work only with these when testing\\n* Test script launches 10 clients and for 100 seconds these are querying these API endpoints:\\n  * `GET /status/`\\n  * `GET /groups/?limit=10`\\n  * `GET /groups/?limit=500`\\n  * `GET /roles/?limit=10`\\n  * `GET /roles/?limit=500`\\n  * `GET /access/?limit=500&...` - this is being ran with weight 10 (rest of endpoints above have weight 1)\\n* Test is checking HTTP return code for PASS/FAIL\"},\"aggs\":[]}"
+        },
+        "id": "32655510-49c8-11ea-bfca-3fb30f912ea8",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [],
+        "type": "visualization",
+        "updated_at": "2021-06-21T21:14:49.695Z",
+        "version": "WzU1OTcyLDE0XQ=="
+    }
+]

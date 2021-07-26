@@ -1,0 +1,56 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "hits": 0,
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+            },
+            "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+            "panelsJSON": "[{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":9,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{},\"panelRefName\":\"panel_0\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":9,\"w\":48,\"h\":14,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":23,\"w\":48,\"h\":15,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"panelRefName\":\"panel_2\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":38,\"w\":48,\"h\":15,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":53,\"w\":48,\"h\":15,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"}]",
+            "refreshInterval": {
+                "pause": true,
+                "value": 0
+            },
+            "timeFrom": "now-30d",
+            "timeRestore": true,
+            "timeTo": "now",
+            "title": "RHCloud CPT: Remediations",
+            "version": 1
+        },
+        "id": "652adf60-99aa-11ea-92bb-1f79e855a38a",
+        "migrationVersion": {
+            "dashboard": "7.9.3"
+        },
+        "references": [
+            {
+                "id": "fc1dfeb0-99a1-11ea-92bb-1f79e855a38a",
+                "name": "panel_0",
+                "type": "visualization"
+            },
+            {
+                "id": "f787d7f0-99a5-11ea-92bb-1f79e855a38a",
+                "name": "panel_1",
+                "type": "visualization"
+            },
+            {
+                "id": "d911a9f0-4cb0-11ea-bfca-3fb30f912ea8",
+                "name": "panel_2",
+                "type": "visualization"
+            },
+            {
+                "id": "2cb438c0-99aa-11ea-92bb-1f79e855a38a",
+                "name": "panel_3",
+                "type": "visualization"
+            },
+            {
+                "id": "3083ef50-99b3-11ea-92bb-1f79e855a38a",
+                "name": "panel_4",
+                "type": "visualization"
+            }
+        ],
+        "type": "dashboard",
+        "updated_at": "2021-06-22T06:46:15.426Z",
+        "version": "WzU2MzgzLDE0XQ=="
+    }
+]

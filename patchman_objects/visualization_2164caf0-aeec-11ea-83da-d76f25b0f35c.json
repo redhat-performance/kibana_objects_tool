@@ -1,0 +1,33 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"name.keyword\",\"value\":\"PatchMan listener perf test\",\"params\":{\"query\":\"PatchMan listener perf test\",\"type\":\"phrase\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name.keyword\":{\"query\":\"PatchMan listener perf test\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+            },
+            "title": "Patch runs info",
+            "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+            "version": 1,
+            "visState": "{\"title\":\"Patch runs info\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"parameters.run.keyword\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"_key\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.cluster.pods.patchman-engine-evaluator-upload.commit.id.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Commit ID\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.cluster.pods.patchman-engine-listener.count.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Number of listeners [#]\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.cluster.pods.patchman-engine-evaluator-upload.count.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Number of Upload Evaluators [#]\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.test.count\",\"customLabel\":\"Count of input messages [#]\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.test.rps\",\"customLabel\":\"Input messages RPS [#]\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.test.n_packages\",\"customLabel\":\"Number of packages per input message [#]\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"parameters.cluster.patchman.db_hostname.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Patchman DB\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"results.kafka.patchman_evaluator_upload.count\",\"customLabel\":\"Results from Kafka [#]\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"results.hosts_count\",\"customLabel\":\"Results from DB [#]\"}},{\"id\":\"12\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"result.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Result\"}},{\"id\":\"13\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"golden.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Golden\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"results.jenkins.build_url.keyword\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"started\",\"sortOrder\":\"desc\",\"customLabel\":\"Jenkins build link\"}}]}"
+        },
+        "id": "2164caf0-aeec-11ea-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            }
+        ],
+        "type": "visualization",
+        "updated_at": "2021-06-21T21:16:29.900Z",
+        "version": "WzU2MDAwLDE0XQ=="
+    }
+]

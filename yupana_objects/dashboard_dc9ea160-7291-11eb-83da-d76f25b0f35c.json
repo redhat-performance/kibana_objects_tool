@@ -1,0 +1,66 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "hits": 0,
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"name.keyword\",\"params\":{\"query\":\"Yupana perf test\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name.keyword\":{\"query\":\"Yupana perf test\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"golden.keyword\",\"params\":{\"query\":\"true\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index\"},\"query\":{\"match\":{\"golden.keyword\":{\"query\":\"true\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+            },
+            "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+            "panelsJSON": "[{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{},\"panelRefName\":\"panel_0\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":15,\"w\":48,\"h\":15,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":30,\"w\":24,\"h\":15,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":24,\"y\":30,\"w\":24,\"h\":15,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"}]",
+            "refreshInterval": {
+                "pause": true,
+                "value": 0
+            },
+            "timeFrom": "now-30d",
+            "timeRestore": true,
+            "timeTo": "now",
+            "title": "RHCloud CPT: Yupana",
+            "version": 1
+        },
+        "id": "dc9ea160-7291-11eb-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "dashboard": "7.9.3"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "2f0c30f0-728f-11eb-83da-d76f25b0f35c",
+                "name": "panel_0",
+                "type": "visualization"
+            },
+            {
+                "id": "51f51c80-728f-11eb-83da-d76f25b0f35c",
+                "name": "panel_1",
+                "type": "visualization"
+            },
+            {
+                "id": "f5c30d30-7290-11eb-83da-d76f25b0f35c",
+                "name": "panel_2",
+                "type": "visualization"
+            },
+            {
+                "id": "14c6f660-7291-11eb-83da-d76f25b0f35c",
+                "name": "panel_3",
+                "type": "visualization"
+            },
+            {
+                "id": "ab8e5bb0-7291-11eb-83da-d76f25b0f35c",
+                "name": "panel_4",
+                "type": "visualization"
+            }
+        ],
+        "type": "dashboard",
+        "updated_at": "2021-06-22T06:46:24.460Z",
+        "version": "WzU2MzkwLDE0XQ=="
+    }
+]

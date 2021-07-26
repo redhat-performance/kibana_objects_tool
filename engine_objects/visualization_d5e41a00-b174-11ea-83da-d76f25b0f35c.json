@@ -1,0 +1,22 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+            },
+            "title": "Engine description",
+            "uiStateJSON": "{}",
+            "version": 1,
+            "visState": "{\"title\":\"Engine description\",\"type\":\"markdown\",\"aggs\":[],\"params\":{\"fontSize\":12,\"markdown\":\"Insights Engine\\n============\\n\\nGather and display performance information for insights-engine, produce 50 messages to platform.inventory.host-ingress-p1\\nand listen for messages by consuming from platform.engine.results. Currently in the setup we have a single pod to process the requests.\",\"openLinksInNewTab\":false}}"
+        },
+        "id": "d5e41a00-b174-11ea-83da-d76f25b0f35c",
+        "migrationVersion": {
+            "visualization": "7.10.0"
+        },
+        "references": [],
+        "type": "visualization",
+        "updated_at": "2021-06-25T14:14:14.650Z",
+        "version": "WzU5MTc4LDE0XQ=="
+    }
+]
