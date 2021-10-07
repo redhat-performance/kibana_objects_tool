@@ -1,0 +1,56 @@
+[
+    {
+        "attributes": {
+            "description": "",
+            "hits": 0,
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"key\":\"name.keyword\",\"negate\":false,\"params\":{\"query\":\"Insights Inventory with RHSM Conduit messages perf test, new hosts\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"Insights Inventory with RHSM Conduit messages perf test, new hosts\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name.keyword\":{\"query\":\"Insights Inventory with RHSM Conduit messages perf test, new hosts\",\"type\":\"phrase\"}}}}]}"
+            },
+            "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+            "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":22,\"w\":24,\"h\":15,\"i\":\"3\"},\"panelIndex\":\"3\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":22,\"w\":24,\"h\":15,\"i\":\"4\"},\"panelIndex\":\"4\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":9,\"w\":48,\"h\":13,\"i\":\"7\"},\"panelIndex\":\"7\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_2\"},{\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":9,\"i\":\"9\"},\"version\":\"7.3.0\",\"panelIndex\":\"9\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"}]",
+            "refreshInterval": {
+                "pause": true,
+                "value": 0
+            },
+            "timeFrom": "now-30d",
+            "timeRestore": true,
+            "timeTo": "now",
+            "title": "Inventory with RHSM messages",
+            "version": 1
+        },
+        "id": "7451b610-46d2-11ea-bfca-3fb30f912ea8",
+        "migrationVersion": {
+            "dashboard": "7.9.3"
+        },
+        "references": [
+            {
+                "id": "94bcc1d0-77d1-11ea-bfca-3fb30f912ea8",
+                "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                "type": "index-pattern"
+            },
+            {
+                "id": "c9c3cbb0-46d2-11ea-bfca-3fb30f912ea8",
+                "name": "panel_0",
+                "type": "visualization"
+            },
+            {
+                "id": "a6518be0-46d2-11ea-bfca-3fb30f912ea8",
+                "name": "panel_1",
+                "type": "visualization"
+            },
+            {
+                "id": "0d9310e0-4727-11ea-bfca-3fb30f912ea8",
+                "name": "panel_2",
+                "type": "visualization"
+            },
+            {
+                "id": "70106a20-7bf5-11eb-83da-d76f25b0f35c",
+                "name": "panel_3",
+                "type": "visualization"
+            }
+        ],
+        "type": "dashboard",
+        "updated_at": "2021-06-22T20:55:48.484Z",
+        "version": "WzU3MjI1LDE0XQ=="
+    }
+]
