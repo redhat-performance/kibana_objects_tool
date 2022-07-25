@@ -257,7 +257,7 @@ def split_export(args):
 
 def list_objects(args):
     for e in Entity.load_all_from_scm("."):
-        print(f"e.filename: {e.type} '{e.title}' {e.size} B")
+        print(f"{e.filename} {e.type} '{e.title}' {e.size} B")
 
 
 def main():
