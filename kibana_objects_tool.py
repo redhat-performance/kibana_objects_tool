@@ -29,19 +29,32 @@ class Entity():
 
     @property
     def id(self):
-        return self._data["id"]
+        if "id" in self._data:
+            return self._data["id"]
+        elif "_id" in self._data:
+            return self._data["_id"]
+        else:
+            raise KeyError("Neither 'id' or '_id' key available")
 
     @property
     def type(self):
-        return self._data["type"]
+        if "type" in self._data:
+            return self._data["type"]
+        elif "_type" in self._data:
+            return self._data["_type"]
+        else:
+            raise KeyError("Neither 'type' or '_type' key available")
 
     @property
     def title(self):
-        return self._data["attributes"]["title"]
+        if "title" in self.attributes:
+            return self.attributes["title"]
+        else:
+            return None
 
     @title.setter
     def title(self, value):
-        self._data["attributes"]["title"] = value
+        self.attributes["title"] = value
 
         # No idea on why we have two title fields, so lets also change
         # in attributes :-/
@@ -55,13 +68,24 @@ class Entity():
         return len(json.dumps(self._data))
 
     @property
-    def attributes(self):
-        a = self._data["attributes"]
+    def attributes_plain(self):
+        if "attributes" in self._data:
+            return self._data["attributes"]
+        elif "_source" in self._data:
+            return self._data["_source"]
+        else:
+            raise KeyError("Neither 'attributes' or '_source' key available")
 
-        if "searchSourceJSON" in a["kibanaSavedObjectMeta"]:
-            a["kibanaSavedObjectMeta"]["searchSourceJSON"] = json.loads(a["kibanaSavedObjectMeta"]["searchSourceJSON"])
+    @property
+    def attributes(self):
+        a = self.attributes_plain
+
+        if "kibanaSavedObjectMeta" in a and "searchSourceJSON" in a["kibanaSavedObjectMeta"]:
+            if type(a["kibanaSavedObjectMeta"]["searchSourceJSON"]) != dict:
+                a["kibanaSavedObjectMeta"]["searchSourceJSON"] = json.loads(a["kibanaSavedObjectMeta"]["searchSourceJSON"])
         if "visState" in a:
-            a["visState"] = json.loads(a["visState"])
+            if type(a["visState"]) != dict:
+                a["visState"] = json.loads(a["visState"])
 
         return a
 
@@ -72,7 +96,7 @@ class Entity():
         if "visState" in value:
             value["visState"] = json.dumps(value["visState"])
 
-        self._data["attributes"] = value
+        self.attributes.update(value)
 
     @staticmethod
     def load_from_data(data):
@@ -100,13 +124,14 @@ class Entity():
         e = Entity()
 
         logger.debug(f"Loading file {filename}")
+        print(f"Loading file {filename}")
         with open(filename, 'r') as fp:
             data = json.load(fp)
 
         assert len(data) == 1
-        assert "id" in data[0]
-        assert "type" in data[0]
-        assert "attributes" in data[0]
+        assert "id" in data[0] or "_id" in data[0]
+        assert "type" in data[0] or "_type" in data[0]
+        assert "attributes" in data[0] or "_source" in data[0]
 
         e._data = data[0]
         e._filename = filename
